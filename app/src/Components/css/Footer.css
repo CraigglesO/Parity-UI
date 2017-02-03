@@ -1,0 +1,10 @@
+.Footer {
+  text-align: center;
+}
+
+.Footer-bar {
+  background-color: #62688f;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}

@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.right-align {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: calc(100vw - 200px);
+}
+
+.Unlock {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Unlock-window {
+  text-align: center;
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border-width: 0.2px;
+  border-color: #7b69bc;
+  border-style: solid;
+  box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.05);
+}
+
+.combos {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.combo {
+  display: inline-block;
+  font-family: sans-serif;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: 130px;
+  width: 100px;
+  height: 180px;
+  border-radius: 3px;
+  border-width: 0.5px;
+  border-color: #c1c1c1;
+  border-style: solid;
+}
+.combo-text {
+  position: absolute;
+  margin-left: 12px;
+}
+
+#result-text {
+  font-size: 28px;
+  color: #787c87;
+}
+
+.parity-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  height: 427px;
+  border-radius: 3px;
+  border-width: 0.2px;
+  border-color: #c1c1c1;
+  border-style: solid;
+  box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.05);
+}
+
+@media all and (max-width: 700px) {
+  .combo {
+    font-size: 80px;
+    width: 70px;
+    height: 115px;
+  }
+  .combo-text {
+    margin-left: 15px;
+  }
+}
+
+@media all and (max-width: 576px) {  /* screen size until 500px */
+  .right-align {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100vw;
+  }
+  .combo {
+    font-size: 60px;
+    width: 50px;
+    height: 80px;
+  }
+  .combo-text {
+    margin-left: 7px;
+  }
+}
+
+@media all and (max-width: 430px) {  /* screen size until 400px */
+  .combo {
+    font-size: 90px;
+    width: 90px;
+    height: 125px;
+  }
+  .combo-text {
+    margin-left: 15px;
+  }
+}
+
+@media all and (max-width: 390px) {  /* screen size until 400px */
+  .combo {
+    font-size: 80px;
+    width: 80px;
+    height: 100px;
+  }
+  .combo-text {
+    margin-left: 15px;
+  }
+}
+
+@media all and (max-width: 345px) {
+  .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .parity-container {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 410px;
+  }
+}
