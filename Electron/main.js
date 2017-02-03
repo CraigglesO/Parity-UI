@@ -67,8 +67,21 @@ app.on('activate', () => {
   }
 });
 
-app.on('onFocus', () => {
+app.on('focus', () => {
   onFocus();
+});
+
+
+/* IPC Events */
+
+ipcMain.on('focus', function (e) {
+  if (!mainWindow.isVisible())
+    mainWindow.show();
+  mainWindow.focus();
+});
+
+ipcMain.on('hide', function(e) {
+  mainWindow.hide();
 });
 
 ipcMain.on('incrBadge', function (e) {
@@ -77,15 +90,6 @@ ipcMain.on('incrBadge', function (e) {
 
 ipcMain.on('setProgress', function (e, progress) {
   setProgress(progress);
-})
-
-ipcMain.on('focus', function (e) {
-  // TODO: if the window is hidden, show it.
-  mainWindow.focus();
-});
-
-ipcMain.on('hide', function(e) {
-  mainWindow.hide();
 });
 
 // When work makes progress, show the progress bar
@@ -96,7 +100,7 @@ function setProgress (progress) {
 
 // When work completes while the app is in the background, show a badge
 function incrBadge() {
-  // if (!dock || mainWindow.isFocused()) return;
+  if (!dock || mainWindow.isFocused()) return;
   notifications++;
   app.setBadgeCount(notifications);
 }
