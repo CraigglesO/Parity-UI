@@ -164,3 +164,27 @@
     height: 410px;
   }
 }
+
+
+/* LICENSE */
+
+#legal {
+  text-align: left;
+  height: auto;
+}
+
+#legal-content {
+  margin: 12px;
+}
+
+.numbers {
+  list-style-type: decimal;
+}
+
+.letters {
+  list-style-type: upper-latin;
+}
+
+.roman {
+  list-style-type: upper-roman;
+}

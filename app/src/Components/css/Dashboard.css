@@ -127,7 +127,7 @@
   height: 50px;
   line-height: 50px;
   text-rendering: optimizeLegibility;
-  box-shadow: inset 0px 0px 0.5px 0.5px rgba(0,0,0,0.25);
+  box-shadow: inset 0px 0px 0.45px 0.45px rgba(0,0,0,0.3);
 }
 
 #usd-symb {
@@ -173,7 +173,7 @@
 /* Connected Components */
 
 .Connected {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left: 10px;
   margin-right: 5px;
 }
@@ -181,7 +181,7 @@
 .content-container {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 42px;
 }
 
 #blockNumber {
@@ -208,6 +208,75 @@
 
 }
 
+/* Synching Components */
+
+.Syncing {
+
+}
+
+#circular-progress {
+}
+
+.CircularProgress-Bg {
+  fill: none;
+  stroke: #c1c1c1;
+}
+
+.CircularProgress-Fg {
+  fill: none;
+  stroke: #F9C84E;
+  stroke-width: 5px;
+}
+
+.CircularProgress-Text {
+  stroke: #F9C84E;
+  fill: #F9C84E;
+  font-size: 32px;
+}
+
+#circ-text-curr {
+}
+
+#circ-text-midl {
+  stroke: #c1c1c1;
+  fill: none;
+  stroke-width: 1px;
+  font-size: 100px;
+}
+
+#circ-text-high {
+
+}
+
+#syncing-finish {
+  padding-top: 12px;
+  font-size: 20px;
+}
+
+/* Disconnected Components */
+
+.Disconnected {
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#disconnect-content {
+  padding-top: 50px;
+  width: 70%;
+  font-size: 20px;
+}
+
+#disconnect-link {
+  font-weight: bold;
+  color: #707db8;
+}
+
+#disconnect-warning {
+  color: #FC6B4C;
+}
 
 @media all and (max-width: 345px) {
   #portfolio-footer {
@@ -224,5 +293,14 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding: 5px;
+  }
+
+  .content-container {
+    height: 40px;
+  }
+
+  #syncing-finish {
+    padding-top: 12px;
+    font-size: 14px;
   }
 }

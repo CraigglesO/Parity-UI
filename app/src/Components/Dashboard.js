@@ -88,7 +88,7 @@ class Dashboard extends Component {
                   </span>
                 </span>
               </div>
-              <div id="portfolio-footer"><div id="portfolio-footer-text"><Link to="/Accounts">View your Accounts</Link></div></div>
+              <Link to="/Accounts" id="portfolio-footer"><div id="portfolio-footer-text">View your Accounts</div></Link>
             </div>
           </div>
 

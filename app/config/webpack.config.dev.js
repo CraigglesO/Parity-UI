@@ -24,7 +24,7 @@ var env = getClientEnvironment(publicUrl);
 // The production configuration is different and lives in a separate file.
 module.exports = {
   externals: { 'electron' : 'commonjs electron' },
-  
+
   solcLoader: {
     optimize: 0
   },

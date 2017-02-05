@@ -1,12 +1,20 @@
 import { observable }  from "mobx";
 import { ipcRenderer } from 'electron';
+import RTDP from './real-time-distance-problem';
+let rtdp = new RTDP(15);
 
 import Web3 from 'web3';
 let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
+// Health Insurrance:
+process.on("uncaughtException", function (err) {
+  console.log(err);
+});
+
 class TimeStore {
   @observable listening;
   @observable syncing;
+  @observable estimatedFinish;
   @observable percent;
   @observable peerCount;
   @observable mining;
@@ -22,7 +30,9 @@ class TimeStore {
     const self = this;
 
     self.listening        = "loading";
-    self.syncing          = false;
+    self.failCount        = 0;
+    self.isSyncing        = false;
+    self.estimatedFinish  = null;
     self.percent          = 0;
     self.peerCount        = 0;
     self.mining           = false;
@@ -30,21 +40,36 @@ class TimeStore {
     self.currentBlock     = 0;
     self.transactionCount = null;
     self.uncles           = null;
-    // self.difficulty       = blocks.difficulty
     self.gasLimit         = null;
     self.gasUsed          = null;
     self.time             = 0;
     self.timeSet          = false;
 
-    // difficulty: { [String: '114092467850677'] s: 1, e: 14, c: [ 1, 14092467850677 ] },
-    self.update();
-    self.watch();
-    self.intervl();
+    self.pointOfFailure();
 
     self.timeInterval = setInterval(() => {
       self.time++;
     }, 1000);
 
+  }
+
+  pointOfFailure() {
+    const self = this;
+    web3.net.getListening((err, listen) => {
+      if (err) {
+        self.failCount++;
+        if (self.failCount > 3) {
+          self.listening = false;
+        }
+        setTimeout(() => {
+          self.pointOfFailure();
+        }, 3000);
+      } else {
+        self.update();
+        self.watch();
+        self.intervl();
+      }
+    });
   }
 
   watch() {
@@ -73,7 +98,6 @@ class TimeStore {
           if (err) return;
           self.transactionCount = block.transactions.length;
           self.uncles           = block.uncles.length;
-          // // self.difficulty       = blocks.difficulty
           self.gasLimit         = block.gasLimit.toLocaleString('en-US');
           self.gasUsed          = block.gasUsed.toLocaleString('en-US');
         });
@@ -108,10 +132,21 @@ class TimeStore {
     const self = this;
     web3.eth.getSyncing((err, sync) => {
       if (err) return;
-      if (sync && (sync.currentBlock - sync.highestBlock > 30) ) {
-        self.syncing = sync;
-        self.percent = (self.syncing.currentBlock / self.syncing.highestBlock);
+      console.log(sync);
+      if (sync && ( (sync.highestBlock - sync.currentBlock) > 30) ) {
+        self.isSyncing = true;
+        self.syncing   = sync;
+        self.estimatedFinish = rtdp.update(sync);
+        self.percent   = (self.syncing.currentBlock / self.syncing.highestBlock);
       } else {
+        if (self.isSyncing) {
+          self.isSynching = false;
+          new window.Notification('Parity Sync Complete', {
+            body: 'Your System is up to date and ready for transactions / Mining',
+            silent: false
+          });
+        }
+        rtdp         = null;
         self.syncing = false;
         self.percent = (-1);
       }

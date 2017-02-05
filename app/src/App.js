@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-// import { ipcRenderer } from 'electron';
 import IdleTimer from 'react-idle-timer';
 import parityStore from './Store/parityStore';
 
-// import Header from './Components/Header';
 import Navigation from './Components/Navigation';
 import './App.css';
 
@@ -133,8 +131,8 @@ export default App;
 
 
 
-
-
+// Experiments:
+//
 // announce(e) {
 //   e.preventDefault();
 //   new window.Notification('Parity Notification', {

@@ -12,19 +12,20 @@ import Accounts from './Components/Accounts';
 import SendRecieve from './Components/SendRecieve';
 import Tools from './Components/Tools';
 import Settings from './Components/Settings';
+import License from './Components/License';
 import './index.css';
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Intro}/>
-      <Route path="/Dashboard"   component={Dashboard}/>
-      <Route path="/Accounts"    component={Accounts}/>
-      <Route path="/SendRecieve" component={SendRecieve}/>
-      <Route path="/Tools"       component={Tools}/>
-      <Route path="/Settings"    component={Settings}/>
+      <IndexRoute component={Intro} />
+      <Route path="/Dashboard"   component={Dashboard} />
+      <Route path="/Accounts"    component={Accounts} />
+      <Route path="/SendRecieve" component={SendRecieve} />
+      <Route path="/Tools"       component={Tools} />
+      <Route path="/Settings"    component={Settings} />
+      <Route path="/License"     component={License} />
     </Route>
-    {/* add additional routes here */}
   </Router>,
   document.getElementById('root')
 );

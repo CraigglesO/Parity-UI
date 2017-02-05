@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 
 import NavLink from './NavLink';
@@ -45,7 +46,7 @@ class Header extends Component {
           <img id="user-img" alt="user-img" src={user}/>
           <div id="user-name">Connor</div>
         </div>
-        <div className="license"><a href="#">License</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2017 Parity</div>
+        <div className="license"><Link to="/License">License</Link> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2017 Parity</div>
       </div>
     );
   }

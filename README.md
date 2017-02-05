@@ -6,8 +6,8 @@
 ### Step 1) Install parity (or geth) and start (or continue) syncing
 
 
+Make sure for this demonstration to open the Webpack's localhost port for CORS requests.
 
-Make sure for this demonstration to open localhost for CORS.
 `parity --rpccorsdomain="http://localhost:3000"`
 
 
