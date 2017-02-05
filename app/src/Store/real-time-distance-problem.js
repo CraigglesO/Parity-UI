@@ -36,6 +36,7 @@ class RTDP {
           return secondsToString(time);
         }
     }
+
     set(lru) {
         const self = this;
         self.LRU.unshift({ block: lru, velocityA: 0, velocityB: 0 });

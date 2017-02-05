@@ -132,14 +132,13 @@ class TimeStore {
     const self = this;
     web3.eth.getSyncing((err, sync) => {
       if (err) return;
-      console.log(sync);
       if (sync && ( (sync.highestBlock - sync.currentBlock) > 30) ) {
-        self.isSyncing = true;
-        self.syncing   = sync;
+        self.isSyncing       = true;
+        self.syncing         = sync;
         self.estimatedFinish = rtdp.update(sync);
-        self.percent   = (self.syncing.currentBlock / self.syncing.highestBlock);
+        self.percent         = (self.syncing.currentBlock / self.syncing.highestBlock);
       } else {
-        if (self.isSyncing) {
+        if (self.isSyncing === true) {
           self.isSynching = false;
           new window.Notification('Parity Sync Complete', {
             body: 'Your System is up to date and ready for transactions / Mining',
