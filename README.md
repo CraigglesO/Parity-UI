@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-Webpack will run a local server of our React app.
+Webpack will run a local server of our React app. If you remove the electron dependencies it would work in the browser.
 
 ### Step 3) Boot up Electron
 
@@ -31,23 +31,36 @@ npm start
 
 
 
-Overview:
+
+
+**Overview:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/overview.png)
 
-After five minutes (and eventually to login), you are required to enter a simple passcode [0 0 0 0 for now]:
+**Bootstrap resize example:**
+
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/bootstrap.gif)
+
+**After five minutes (and eventually to login), you are required to enter a simple passcode [0 0 0 0 for now]:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/pass.png)
 
-Syncing:
+**Syncing:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/syncScreen.png)
 
-Syncing in the dock:
+**Syncing in the dock:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/downloadDock.png)
 
-When the sync is complete:
+**When the sync is complete:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/complete.gif)
 
-Loading screen and failure to connect example:
+**Loading screen and failure to connect example:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/skeleton.gif)
 
-License Page:
+**License Page:**
+
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/license.png)
