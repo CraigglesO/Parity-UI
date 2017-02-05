@@ -1,10 +1,15 @@
 a {
   color: #787c87;
+  transition: color .5s ease;
 }
 
 a:hover {
   color: #707db8;
   text-decoration: none;
+}
+
+.Navigation {
+  transition: color .5s ease;
 }
 
 .Navigation a.active {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { ipcRenderer } from 'electron';
 import IdleTimer from 'react-idle-timer';
+import parityStore from './Store/parityStore';
 
 // import Header from './Components/Header';
 import Navigation from './Components/Navigation';
@@ -98,7 +99,7 @@ class App extends Component {
           <div className="App" style={this.state.style.appLock}>
             <Navigation />
             <div className="right-align">
-              {this.props.children}
+              { React.cloneElement(this.props.children, { store: parityStore }) }
             </div>
           </div>
           <div className="Unlock" style={this.state.style.lockScreen}>

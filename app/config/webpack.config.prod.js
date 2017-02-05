@@ -163,6 +163,10 @@ module.exports = {
         query: {
           name: 'static/media/[name].[hash:8].[ext]'
         }
+      },
+      {
+        test: /\.sol$/,
+        loaders: ['web3', 'solc']
       }
     ]
   },

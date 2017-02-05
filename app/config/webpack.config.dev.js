@@ -24,6 +24,10 @@ var env = getClientEnvironment(publicUrl);
 // The production configuration is different and lives in a separate file.
 module.exports = {
   externals: { 'electron' : 'commonjs electron' },
+  
+  solcLoader: {
+    optimize: 0
+  },
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   devtool: 'cheap-module-source-map',
@@ -155,6 +159,10 @@ module.exports = {
         query: {
           name: 'static/media/[name].[hash:8].[ext]'
         }
+      },
+      {
+        test: /\.sol$/,
+        loaders: ['web3', 'solc']
       }
     ]
   },

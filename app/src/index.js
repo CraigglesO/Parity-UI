@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../font-awesome-4.7.0/css/font-awesome.min.css';

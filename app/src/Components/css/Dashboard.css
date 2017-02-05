@@ -1,3 +1,228 @@
 .Dashboard {
 
 }
+
+.content:empty {
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+	width: 90%;
+	height: 300px; /* change height to see repeat-y behavior */
+
+	background-image:
+		linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+		linear-gradient( lightgray 20px, transparent 0 ),
+		linear-gradient( lightgray 20px, transparent 0 ),
+		linear-gradient( lightgray 20px, transparent 0 ),
+		linear-gradient( lightgray 20px, transparent 0 );
+
+	background-repeat: repeat-y;
+
+	background-size:
+		50px 200px, /* highlight */
+		150px 200px,
+		350px 200px,
+		300px 200px,
+		250px 200px;
+
+	background-position:
+		0 0, /* highlight */
+		20px 0,
+		20px 40px,
+		20px 80px,
+		20px 120px;
+
+	animation: shine 1s infinite;
+}
+
+@keyframes shine {
+	to {
+		background-position:
+			100% 0, /* move highlight to right */
+			20px 0,
+			20px 40px,
+			20px 80px,
+			20px 120px;
+	}
+}
+
+.content-left {
+  position: absolute;
+  color: #707db8;
+  font-size: 25px;
+  left: 10px;
+  bottom: 0px;
+}
+
+.content-right {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  bottom: 1px;
+}
+
+/* Portfolio */
+
+#portfolio-main {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#portfolio-value {
+  font-size: 42px;
+}
+
+#eth {
+  position: relative;
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+#portfolio-balance {
+  padding-top: 10px;
+  letter-spacing: 2px;
+  color: #c1c1c1;
+}
+
+#convert {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px;
+  border-top: 1px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: #c1c1c1;
+  border-style: solid;
+}
+
+#usd-left {
+  display: flex;
+  position: relative;
+  width: 50%;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-color: #c1c1c1;
+  border-style: dashed;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#bit-right {
+  display: flex;
+  position: relative;
+  width: 50%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.currency-image {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-rendering: optimizeLegibility;
+  box-shadow: inset 0px 0px 0.5px 0.5px rgba(0,0,0,0.25);
+}
+
+#usd-symb {
+  background-color: #96CE1D;
+  color: white;
+}
+
+#btc-symb {
+  background-color: #FFB119;
+  color: white;
+}
+
+.currency-value {
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+.currency-type {
+  text-align: right;
+}
+
+#portfolio-footer {
+  position: relative;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c1c1c1;
+  cursor: pointer;
+}
+
+#portfolio-footer:hover {
+  color: #787c87;
+}
+
+#portfolio-footer-text {
+  position: relative;
+}
+
+
+/* Connected Components */
+
+.Connected {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+#blockNumber {
+
+}
+
+#transaction-count {
+
+}
+
+#uncles {
+
+}
+
+#gas-limit {
+
+}
+
+#gas-used {
+
+}
+
+#peers {
+
+}
+
+
+@media all and (max-width: 345px) {
+  #portfolio-footer {
+    height: 60px;
+    line-height: 60px;
+  }
+  #usd-left {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: 5px;
+  }
+
+  #bit-right {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: 5px;
+  }
+}
