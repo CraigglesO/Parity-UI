@@ -28,3 +28,26 @@ cd Electron
 npm install
 npm start
 ```
+
+
+
+Overview:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/overview.png)
+
+After five minutes (and eventually to login), you are required to enter a simple passcode [0 0 0 0 for now]:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/pass.png)
+
+Syncing:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/syncScreen.png)
+
+Syncing in the dock:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/downloadDock.png)
+
+When the sync is complete:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/complete.gif)
+
+Loading screen and failure to connect example:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/skeleton.gif)
+
+License Page:
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/license.png)
