@@ -30,10 +30,24 @@ npm start
 ```
 
 
+## About
 
+* **Electron** App
+* Front End - **React**
+* **Web3** ready
+* Module Bundler and Development Server - **Webpack**
+* 2016-2017 (ES6 and ES7 support) - **Babel**
+  - Observables
+  - Transform Decorators
+* State Manager - **MobX**
+* CSS Scaffolding - Bootstrap
+* Icon support - Font Awesome
 
+## Pictures
 
 **Overview:**
+
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/overview1.png)
 
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/overview.png)
 
