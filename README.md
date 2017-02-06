@@ -40,8 +40,8 @@ npm start
   - Observables
   - Transform Decorators
 * State Manager - **MobX**
-* CSS Scaffolding - Bootstrap
-* Icon support - Font Awesome
+* CSS Scaffolding - **Bootstrap**
+* Icon support - **Font Awesome**
 
 ## Pictures
 
