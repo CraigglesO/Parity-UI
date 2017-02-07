@@ -1,0 +1,103 @@
+.Estore {
+
+}
+
+.estore-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #707db8;
+  color: #ededed;
+  -webkit-font-smoothing: antialiased;
+}
+
+#estore-ethereum {
+  padding-top: 20px;
+  font-size: 60px;
+  font-weight: lighter;
+  font-family: -apple-system, 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI";
+}
+
+#estore-store {
+  font-weight: bold;
+  font-size: 35px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+}
+
+.app-image {
+  padding-top: 10px;
+  position: relative;
+  height: 65%;
+}
+
+.app-name {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.app-details {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 43px;
+  width: 100%;
+}
+
+.app-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.app-price {
+  font-size: 16px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.amount {
+
+}
+
+
+
+
+
+
+
+
+/* APPS */
+#oraclize {
+  color: #60B9F0;
+}
+
+.padding {
+  position: relative;
+  padding-top: 15px;
+}
+
+#dg-image {
+  position: relative;
+  background-color: #25333D;
+  padding-top: 10px;
+}
+
+#dg-svg {
+  transform: scale(1.3);
+}
+
+#dg-name {
+  padding-top: 10px;
+  color: #ECB21C;
+  letter-spacing: 4px;
+}

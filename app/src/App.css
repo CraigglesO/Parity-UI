@@ -76,6 +76,20 @@
   box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.05);
 }
 
+.parity-container-app {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #787c87;
+  overflow: hidden;
+  background-color: white;
+  height: 200px;
+  border-radius: 3px;
+  border-width: 0.2px;
+  border-color: #c1c1c1;
+  border-style: solid;
+  box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.05);
+}
+
 .parity-container-header {
   position: relative;
   width: 100%;
@@ -158,10 +172,25 @@
     padding-left: 0px;
     padding-right: 0px;
   }
+  .col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .col-lg-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .parity-container {
     margin-top: 0px;
     margin-bottom: 5px;
     height: 410px;
+  }
+  .parity-container-app {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 197px;
+    border-radius: 0;
+    border-style: none;
   }
 }
 

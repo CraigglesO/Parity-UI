@@ -43,7 +43,7 @@ class Dashboard extends Component {
     return (
         <div className="Dashboard">
 
-          <div className=" col-md-6">
+          <div className="col-md-6">
             <div className="parity-container">
               <div className="parity-container-header">
                 <span className="header-left">Status</span>

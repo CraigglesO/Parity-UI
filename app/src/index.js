@@ -11,6 +11,7 @@ import Dashboard from './Components/Dashboard';
 import Accounts from './Components/Accounts';
 import SendRecieve from './Components/SendRecieve';
 import Tools from './Components/Tools';
+import Estore from './Components/Estore';
 import Settings from './Components/Settings';
 import License from './Components/License';
 import './index.css';
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/Accounts"    component={Accounts} />
       <Route path="/SendRecieve" component={SendRecieve} />
       <Route path="/Tools"       component={Tools} />
+      <Route path="/Estore"      component={Estore} />
       <Route path="/Settings"    component={Settings} />
       <Route path="/License"     component={License} />
     </Route>
