@@ -78,3 +78,13 @@ npm start
 **License Page:**
 
 ![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/license.png)
+
+
+
+
+
+** ADDITIONS!! **
+
+**App Store:**
+
+![alt tag](https://github.com/CraigglesO/Parity-UI/blob/master/img/store.png)
