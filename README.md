@@ -5,6 +5,8 @@
 
 ### Step 1) Install parity (or geth) and start (or continue) syncing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/CraigglesO/Parity-UI.svg)](https://greenkeeper.io/)
+
 
 Make sure for this demonstration to open the Webpack's localhost port for CORS requests.
 
